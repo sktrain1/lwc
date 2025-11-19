@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Application Status">
+        <div class="slds-m-around_medium">
+
+            <p>{message}</p>
+
+            <!-- Image rotation -->
+            <template if:true={currentImage}>
+                <img src={currentImage} style="width:200px; margin-top:20px;" />
+            </template>
+
+            <!-- Progress bar -->
+            <lightning-progress-bar value={progress} label="Progress"></lightning-progress-bar>
+
+            <!-- Manual navigation button-->
+            <template if:true={stageApproved}>
+                <lightning-button 
+                    label="Go to Third-Party Page" 
+                    variant="brand"
+                    onclick={handleManualNav}
+                    class="slds-m-top_medium"
+                ></lightning-button>
+            </template>
+        </div>
+    </lightning-card>
+</template>

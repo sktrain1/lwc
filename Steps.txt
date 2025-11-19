@@ -1,0 +1,32 @@
+Custom Setting Assumption
+
+You have a hierarchy custom setting named ThirdPartyConfig__c with fields:
+
+Environment__c = 'Production' or 'Sandbox'
+
+BaseUrl__c – base third-party url
+
+MaxWaitSeconds__c – e.g., 90
+
+Static Resource
+
+Upload a ZIP static resource named WaitImages containing:
+
+img1.png
+img2.png
+img3.png
+img4.png
+
+Summary of What This Delivers
+
+✓ Auto-start timer
+✓ Display rotating images every 5 seconds from static resource
+✓ Poll Opportunity Stage every 5 seconds
+✓ Stop when Approved
+✓ Show success message for 5 seconds
+✓ Redirect to third-party URL with secret_key from Opportunity
+✓ Manual redirect button
+✓ Timeout logic & message
+✓ Progress bar for entire waiting duration
+✓ Environment-based custom setting
+✓ All errors shown gracefully
